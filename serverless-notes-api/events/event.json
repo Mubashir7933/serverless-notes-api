@@ -1,0 +1,4 @@
+{
+  "httpMethod": "POST",
+  "body": "{\"title\": \"Meeting Notes\", \"content\": \"Discuss project roadmap.\"}"
+}

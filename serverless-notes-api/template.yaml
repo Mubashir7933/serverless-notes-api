@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: A simple serverless notes API
+
+Resources:
+  NotesFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src.app.lambda_handler
+      Runtime: python3.13
+      CodeUri: .
+      Events:
+        GetNotes:
+          Type: Api
+          Properties:
+            Path: /notes
+            Method: get
+        PostNote:
+          Type: Api
+          Properties:
+            Path: /notes
+            Method: post
